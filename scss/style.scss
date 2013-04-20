@@ -1,0 +1,77 @@
+// @import url(http://fonts.googleapis.com/css?family=Righteous);
+@import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+body{
+	background:white;
+	font-family:'Bubblegum Sans', 'Helvetica', sans-serif;
+}
+
+.wrapper{
+
+	width:960px;
+	margin:0 auto;
+	display:block;
+
+	h1, h2{
+		text-align: center;
+		position:relative;
+		a{
+			color:black;
+			text-decoration: none;
+		}
+
+	}
+
+	h1{
+		font-size:48px;
+		line-height:48px;
+		margin:30px 0 0 0;
+		padding:0;
+		&:after{
+			height:150px;
+			width:150px;
+			display:block;
+			position:absolute;
+			top:-5px;
+			left:79%;
+			background:url('../img/new.png') no-repeat;
+			content:"";
+			transform: rotate(8deg);
+			-ms-transform: rotate(8deg);
+			-webkit-transform: rotate(8deg);
+		}
+	}
+
+	h2{
+		font-size:26px;
+		line-height:20px;
+		margin:0;
+		padding:0;
+	}
+
+	#success{
+		width:960px;
+		margin-top:20px;
+		height:600px;
+		background:url('../img/balloons/1.jpg') no-repeat top center;
+		-webkit-background-size: 500px auto;
+		  -moz-background-size: 500px auto;
+		  -o-background-size: 500px auto;
+		  background-size: 500px auto;
+	}
+
+	#making{
+		position:fixed;
+		bottom:10px;
+		right:10px;
+	}
+
+	.numberOfHands{
+		position:fixed;
+		bottom:10px;
+		left:10px;
+	}
+
+}

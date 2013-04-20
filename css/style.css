@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Bubblegum+Sans);
+/* line 4, ../scss/style.scss */
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 6, ../scss/style.scss */
+body {
+  background: white;
+  font-family: 'Bubblegum Sans', 'Helvetica', sans-serif; }
+
+/* line 11, ../scss/style.scss */
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  display: block; }
+  /* line 17, ../scss/style.scss */
+  .wrapper h1, .wrapper h2 {
+    text-align: center;
+    position: relative; }
+    /* line 20, ../scss/style.scss */
+    .wrapper h1 a, .wrapper h2 a {
+      color: black;
+      text-decoration: none; }
+  /* line 27, ../scss/style.scss */
+  .wrapper h1 {
+    font-size: 48px;
+    line-height: 48px;
+    margin: 30px 0 0 0;
+    padding: 0; }
+    /* line 32, ../scss/style.scss */
+    .wrapper h1:after {
+      height: 150px;
+      width: 150px;
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: 79%;
+      background: url("../img/new.png") no-repeat;
+      content: "";
+      transform: rotate(8deg);
+      -ms-transform: rotate(8deg);
+      -webkit-transform: rotate(8deg); }
+  /* line 47, ../scss/style.scss */
+  .wrapper h2 {
+    font-size: 26px;
+    line-height: 20px;
+    margin: 0;
+    padding: 0; }
+  /* line 54, ../scss/style.scss */
+  .wrapper #success {
+    width: 960px;
+    margin-top: 20px;
+    height: 600px;
+    background: url("../img/balloons/1.jpg") no-repeat top center;
+    -webkit-background-size: 500px auto;
+    -moz-background-size: 500px auto;
+    -o-background-size: 500px auto;
+    background-size: 500px auto; }
+  /* line 65, ../scss/style.scss */
+  .wrapper #making {
+    position: fixed;
+    bottom: 10px;
+    right: 10px; }
+  /* line 71, ../scss/style.scss */
+  .wrapper .numberOfHands {
+    position: fixed;
+    bottom: 10px;
+    left: 10px; }
