@@ -10,7 +10,7 @@ I haven't been able to test this with more recent versions of the Leap drivers a
 
 ### Usage
 
-Fire this up in your browser, make sure your Leap Motion is plugged in, and start making balloon animals! Make sure your sound is on.
+Fire this up in your browser, make sure your Leap Motion is plugged in, and start making balloon animals! Make sure your sound is on. This hack is mostly intended for humour and not for practical purposes.
 
 ### Demonstration Vine:
 [https://vine.co/v/bUTLuIqmdQd](https://vine.co/v/bUTLuIqmdQd)
