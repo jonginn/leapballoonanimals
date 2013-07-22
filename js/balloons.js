@@ -27,6 +27,7 @@ $(document).ready(function() {
 
 		if((balloonSuccess == false) && (handsLength >= 2) && (isBalloonBeingMade == false)){
 			isBalloonBeingMade = true;
+			$("#video").remove();
 			$("#making").show();
 			sound.loop = true;
 			sound.play();
