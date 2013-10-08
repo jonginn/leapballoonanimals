@@ -46,9 +46,7 @@ $(document).ready(function() {
 			sound.loop = true;
 			sound.play();
 			// play random balloon noises
-		}
-
-		if((balloonSuccess == false) && (handsLength == 1) && (isBalloonBeingMade == false)){
+		} else if((balloonSuccess == false) && (handsLength == 1) && (isBalloonBeingMade == false)){
 			$("#onehand").fadeIn('fast');
 			$("#video").hide();
 			$("#twohands").hide();
