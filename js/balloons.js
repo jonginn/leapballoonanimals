@@ -13,6 +13,7 @@ var successSound = document.getElementById('success-noise');
 $(document).ready(function() {
 
 	Leap.loop(function(frame) {
+
 		if (frame.hands === undefined ) { 
 	      var handsLength = 0 
 	    } else {
@@ -23,15 +24,34 @@ $(document).ready(function() {
 		    $(".numberOfHands").text(handsLength);
 		}
 
+		// RESET
+		function reset(){
+			if((isBalloonBeingMade == true) && (handsLength == 0) && (balloonSuccess == true)){
+				$("#success").hide();
+				$("#video").fadeIn();
+				$("#making").hide();
+				isBalloonBeingMade = false;
+				balloonSuccess = false;
+			}
+		}
+
 		// if interval is under a certain amount warn the user they haven't finished
 
 		if((balloonSuccess == false) && (handsLength >= 2) && (isBalloonBeingMade == false)){
 			isBalloonBeingMade = true;
-			$("#video").remove();
+			$("#video").hide();
 			$("#making").show();
+			$("#onehand").hide();
+			$("#twohands").fadeIn('fast');
 			sound.loop = true;
 			sound.play();
 			// play random balloon noises
+		}
+
+		if((balloonSuccess == false) && (handsLength == 1) && (isBalloonBeingMade == false)){
+			$("#onehand").fadeIn('fast');
+			$("#video").hide();
+			$("#twohands").hide();
 		}
 
 		if((isBalloonBeingMade == true) && (handsLength == 0) && (balloonSuccess == false)){
@@ -42,11 +62,17 @@ $(document).ready(function() {
 			$("#success").css('background-image', balloonbg);
 			$("#success").fadeIn();
 			$("#making").hide();
+			$("#twohands").hide();
 			sound.pause();
 			successSound.loop = false;
 			successSound.play()
 			balloonSuccess = true;
+
+			setTimeout(function() {   //calls click event after a certain time
+			   reset();
+			}, 5000);
 		}
+
 
 		 // Further things to add:
 		 // * Timer for making
